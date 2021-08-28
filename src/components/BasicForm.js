@@ -44,12 +44,17 @@ const BasicForm = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
+    if (!formIsValid) {
+      return;
+    }
+
     resetFirstName();
     resetLastName();
     resetEmail();
     console.log(firstName);
     console.log(lastName);
     console.log(email);
+
   };
 
   const firstNameClasses = firstNameHasError

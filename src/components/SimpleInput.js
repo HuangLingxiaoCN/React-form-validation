@@ -44,6 +44,10 @@ const SimpleInput = () => {
     event.preventDefault();
     // const enteredValue = nameInputRef.current.value;
 
+    if (!formIsValid) {
+      return;
+    }
+
     console.log(enteredName)
     console.log(enteredEmail)
     resetNameInput();
